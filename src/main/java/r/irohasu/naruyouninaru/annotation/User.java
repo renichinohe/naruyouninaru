@@ -1,4 +1,4 @@
-package r.irohasu.naruyouninaru.anotation;
+package r.irohasu.naruyouninaru.annotation;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
