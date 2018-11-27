@@ -1,9 +1,9 @@
 package r.irohasu.naruyouninaru;
 
-import r.irohasu.naruyouninaru.annotation.Address;
-import r.irohasu.naruyouninaru.annotation.User;
-import r.irohasu.naruyouninaru.annotation.UserId;
-import r.irohasu.naruyouninaru.annotation.UserName;
+import r.irohasu.naruyouninaru.anotation.Address;
+import r.irohasu.naruyouninaru.anotation.User;
+import r.irohasu.naruyouninaru.anotation.UserId;
+import r.irohasu.naruyouninaru.anotation.UserName;
 
 public class Main {
     public static void main(String args[]) {

@@ -1,14 +1,29 @@
 package r.irohasu.naruyouninaru.authenticationApi.api;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import r.irohasu.naruyouninaru.authenticationApi.domain.MailAddress;
+import r.irohasu.naruyouninaru.authenticationApi.domain.Password;
 
 @AllArgsConstructor
 @EqualsAndHashCode
 @ToString(includeFieldNames = false)
-public class AuthenticationRequestForms {
+public class AuthenticationRequest {
     @Getter
-    private final String mailAddress;
+    @Setter
+    public final MailAddress mailAddress;
 
     @Getter
-    private final String password;
+    @Setter
+    public final Password password;
+
+    public AuthenticationRequest create() {
+        return new AuthenticationRequest(
+                new MailAddress(mailAddress.getValue()),
+                new Password(password.getValue())
+        );
+    }
 }
