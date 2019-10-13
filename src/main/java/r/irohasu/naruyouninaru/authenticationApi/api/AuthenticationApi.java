@@ -1,5 +1,7 @@
 package r.irohasu.naruyouninaru.authenticationApi.api;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,8 +16,13 @@ public class AuthenticationApi {
 
     public final String URI = "/authentication";
 
+    private static final Logger logger = LoggerFactory.getLogger(AuthenticationApi.class);
+
     @RequestMapping(value = URI, method = RequestMethod.POST)
     public String invoke(AuthenticationRequest request, Model model) {
+
+        logger.info("メールアドレスとパスワードで認証をしました。");
+
         model.addAttribute("message",authenticationService.check(request.create()).getValue());
         return "login";
     }
