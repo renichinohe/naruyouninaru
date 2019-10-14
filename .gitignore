@@ -31,7 +31,6 @@ Thumbs.db
 .idea
 out/
 .gradle/
-build.gradle
 settings
 gradlew
 gradlew.bat
